@@ -1,0 +1,588 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+background-image: linear-gradient(90deg, #0069aa 50%, #ee3a43 50%);
+font-size: 18px;
+font-family: 'Raleway', sans-serif;
+margin: 0;
+padding-bottom: 100px;
+}
+
+header{
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+background-color: #C7C7C7;
+color: black;
+text-shadow: 0 1px hsl(0,0%,85%),
+          0 2px hsl(0,0%,80%),
+          0 3px hsl(0,0%,75%), 
+          0 4px hsl(0,0%,70%), 
+          0 5px hsl(0,0%,65%),
+          0 5px 10px black;
+}
+
+h1{
+font-size: 50px;
+line-height: 1;
+padding: 50px 0;
+text-align: center;
+}
+
+h2{
+font-size: 32px;
+line-height: 1.5;
+}
+
+nav{
+background-color: black;
+padding: 25px 0;    
+text-align: center;   
+}
+
+nav ul{
+list-style-type: none;
+}
+
+nav li{
+display: inline;
+}
+
+nav a{
+color: white;
+background-color: black;
+font-weight: bold;
+text-decoration: none;
+padding: 0 10px;
+}
+
+nav a:hover { 
+text-decoration: underline;
+}
+
+#current{
+padding: 25px 10px;
+font-size: 20px;
+color: black;
+background-color: #878787;
+text-shadow: 1px 1px 2px white;
+}
+
+footer{
+background-color: #C7C7C7;
+color: black;
+padding: 20px;
+text-align: center;
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+font-family: sans-serif;
+}
+
+.skip a{
+background: white;
+left: 0;
+padding: 6px;
+-webkit-transition: top 1s ease-out;
+transition: top 1s ease-out;
+z-index: 1;
+position: absolute;
+top: -40px;
+}
+
+.skip a:focus {
+top: 0;
+}
+
+/* Home Page */
+.switch-container{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr auto auto auto auto;
+  grid-row-gap: 30px;
+}
+
+.switch-text-block{
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid white;
+  padding: 30px;
+  align-self: center;
+}
+
+.switch {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 2;
+}
+
+.switch-image {
+  padding-top: 30px;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+#best-games {
+  grid-column: 1 / span 3;
+  grid-row: 4 / span 1;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: -50px;
+}
+
+#best-games > img{
+  width: 100%;
+  overflow: hidden;
+}
+
+#which-system {
+  grid-column: 1 / span 3;
+  grid-row: 5 / span 1;
+}
+
+#game-medium {
+  grid-column: 1 / span 3;
+  grid-row: 6 / span 1;
+}
+
+#accessories-medium {
+  grid-column: 1 / span 3;
+  grid-row: 7 / span 1;
+}
+
+.switch-link-block {
+  width: 90%;
+  margin: auto;
+  left: 5%;
+  right: 5%;
+  border: 1px dashed rgba(155, 155, 155, 1);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image:
+        linear-gradient(90deg, rgba(155, 155, 155, 0.5) 1px, transparent 0),
+        linear-gradient(rgba(155, 155, 155, 0.5) 1px, transparent 0);
+  background-size: 15px 15px;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.switch-link-block > img {
+  width: 90%;
+}
+
+.switch-link-block > h2 {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.switch-link-block > button{
+  width: 60%;
+  height: 40px;
+  background: #ee3a43;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+}
+
+.switch-link-block a{
+  text-decoration: none;
+  color: black;
+}
+
+.switch-link-block a:visited{
+  color: black;
+}
+
+/* Game Page */
+.game-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  padding: 30px 30px;
+  margin: 50px 0;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.game-container > #image1{
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+  overflow: hidden;
+}
+
+.game-container > #image2{
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  overflow: hidden;
+}
+
+.game-container > #image3{
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+  overflow: hidden;
+}
+
+.game-container > #image4{
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  overflow: hidden;
+}
+
+.game-container > #image5{
+  grid-column: 1 / span 2;
+  grid-row: 3 / span 2;
+  overflow: hidden;
+}
+
+.game-container > #image6{
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+  overflow: hidden;
+}
+
+.game-container > #image7{
+  grid-column: 3 / span 1;
+  grid-row: 4 / span 1;
+  overflow: hidden;
+}
+
+.game-container > #image8{
+  grid-column: 1 / span 1;
+  grid-row: 5 / span 1;
+  overflow: hidden;
+}
+
+.game-container > #image9{
+  grid-column: 2 / span 2;
+  grid-row: 5 / span 1;
+  overflow: hidden;
+}
+
+.game-container img{
+  width: 100%;
+  height: 100%;
+}
+
+/* Hardware Page */
+.hardware{
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.hardware h2{
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.hardware img{
+  width: 100%;
+}
+
+.hardware .card{
+  margin: 12px;
+  border-radius: 15px;
+  padding: 0 0 25px 0;
+  background: rgba(255, 255, 255, .8);
+  border: 5px solid white;
+  flex-basis: 400px;
+}
+
+.hardware .card > ul{
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hardware .card > details {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.hardware .card > details > p {
+  padding: 5px;
+}
+
+.hardware .card > button{
+  width: 60%;
+  height: 40px;
+  border: 0;
+  margin-left: 20%;
+  border-radius: 15px;
+  background: #595959;
+  color: white;
+  font-size: 1em;
+}
+
+.hardware .red-card > h2{
+  background: #ee3a43;
+}
+
+.hardware .red-card > button{
+  background: #ee3a43;
+  color: black;
+}
+
+.hardware .blue-card > h2{
+  background: #0069aa;
+  color: white;
+}
+
+.hardware .blue-card > button{
+  background: #0069aa;
+}
+
+/* News Page */
+.news{
+  background-color: rgba(255, 255, 255, .8);
+  margin: 50px 0;
+  padding: 20px 10px;
+  display: grid;
+  grid-template-rows: auto auto 150px;
+}
+
+.news > img{
+  max-width: 80%;
+  margin: 0 auto;
+  grid-row: 1 / span 1;
+}
+
+.news > h2{
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 15px 5px;
+  grid-row: 2 / span 1;
+}
+
+.news > .detail-news{
+  grid-row: 3 / span 1;
+  padding: 0px 15px;
+  overflow-y: auto;
+  background: rgba(135, 135, 135, 0.5);
+  border-left: 5px solid #878787;
+  margin-top: 5px;
+}
+
+.news > .detail-news > p{
+  font-size: 15px;
+  padding: 10px 0px;
+}
+
+.news > .detail-news > h3{
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.more-news {
+  background-color: rgba(255, 255, 255, .8);
+  margin: 50px 0;
+  padding: 20px 10px;
+}
+
+.more-news > button {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  animation: shinning-border 1.5s infinite;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  background: #ee3a43;
+  color: black;
+  font-size: 1em;
+}
+
+.more-news > button > a{
+  text-decoration: none;
+  color: black;
+}
+
+.more-news > button > a:visited{
+  color: black;
+}
+
+@keyframes shinning-border {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0,105,170,0.4);
+  }
+  100% {
+     box-shadow: 0 0 0 20px rgba(0,105,170,0);
+  }
+}
+
+@media screen and (min-width: 800px){
+  nav{
+    background-color: black;
+    padding: 25px 30px;    
+    text-align: left;   
+  }
+
+  nav li{
+    padding: 0 15px;
+  }
+
+  #current{
+    padding: 25px 15px;
+  }
+
+  /* Home Page */
+  .switch-container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 400px 100px 100px 200px auto auto;
+  }
+  
+  .switch {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+  }
+  
+  .switch-image {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+  }
+  
+  #best-games {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
+    background: none;
+    padding: 0px;
+    margin-top: 0px;
+    z-index: -1;
+  }
+
+  #best-games > img{
+    min-width: 100%;
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .switch-link-block {
+    width: 80%;
+  }
+  
+  #which-system {
+    grid-column: 1 / span 4;
+    grid-row: 5 / span 1;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  #game-medium {
+    grid-column: 1 / span 2;
+    grid-row: 6 / span 1;
+    margin-left: 15%;
+    margin-right: 5%;
+  }
+  
+  #accessories-medium {
+    grid-column: 3 / span 2;
+    grid-row: 6 / span 1;
+    margin-left: 5%;
+    margin-right: 15%;
+  }
+
+  /* Games Page */
+  .game-container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .game-container > #image5{
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+  
+  .game-container > #image6{
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+  }
+  
+  .game-container > #image7{
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1;
+  }
+  
+  .game-container > #image8{
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+  }
+  
+  .game-container > #image9{
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+  }
+
+  /* News Page */
+  .news{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  
+  .news > img{
+    width: 90%;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+  }
+  
+  .news > h2{
+    text-align: center;
+    margin: 0 10%;
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    padding-top: 0px;
+  }
+  
+  .news > .detail-news{
+    margin-right: 10%;
+    max-height: 400px;
+    grid-row: 1 / span 2;
+    grid-column: 2 / span 1;
+  }
+
+  .more-news {
+    text-align: center;
+  }
+
+  .more-news > button {
+    margin-left: 0;
+  }
+}
+
+
+/** Code for prefers reduced motion **/
+@media screen and (prefers-reduced-motion: reduce){
+/*Turn off scroll*/
+html{
+    scroll-behavior: auto; /* Removes scroll animation */
+}
+
+/*Turn off transition*/
+.skip a{
+  -webkit-transition: initial; /* sets to default setting */
+  transition: initial; /* sets to default setting */
+}
+
+/*Turn off parallax*/
+header{
+  background-attachment: initial;
+}
+}
